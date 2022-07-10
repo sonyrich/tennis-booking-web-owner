@@ -117,7 +117,7 @@ $(function () {
   // $('#revenue-chart').get(0).getContext('2d');
 
   var salesChartData = {
-    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+    labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
     datasets: [
       {
         label: 'Digital Goods',
@@ -129,17 +129,6 @@ $(function () {
         pointHighlightFill: '#fff',
         pointHighlightStroke: 'rgba(60,141,188,1)',
         data: [28, 48, 40, 19, 86, 27, 90]
-      },
-      {
-        label: 'Electronics',
-        backgroundColor: 'rgba(210, 214, 222, 1)',
-        borderColor: 'rgba(210, 214, 222, 1)',
-        pointRadius: false,
-        pointColor: 'rgba(210, 214, 222, 1)',
-        pointStrokeColor: '#c1c7d1',
-        pointHighlightFill: '#fff',
-        pointHighlightStroke: 'rgba(220,220,220,1)',
-        data: [65, 59, 80, 81, 56, 55, 40]
       }
     ]
   }
@@ -208,7 +197,7 @@ $(function () {
   // $('#revenue-chart').get(0).getContext('2d');
 
   var salesGraphChartData = {
-    labels: ['2011 Q1', '2011 Q2', '2011 Q3', '2011 Q4', '2012 Q1', '2012 Q2', '2012 Q3', '2012 Q4', '2013 Q1', '2013 Q2'],
+    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'],
     datasets: [
       {
         label: 'Digital Goods',
@@ -221,7 +210,7 @@ $(function () {
         pointHoverRadius: 7,
         pointColor: '#efefef',
         pointBackgroundColor: '#efefef',
-        data: [2666, 2778, 4912, 3767, 6810, 5670, 4820, 15073, 10687, 8432]
+        data: [2666000, 2778000, 4912000, 3767000, 10650000, 5670000, 4820000, 15073000, 18050000, 16581000, 26458000, 19889000]
       }
     ]
   }
@@ -245,7 +234,7 @@ $(function () {
       }],
       yAxes: [{
         ticks: {
-          stepSize: 5000,
+          stepSize: 5000000,
           fontColor: '#efefef'
         },
         gridLines: {
