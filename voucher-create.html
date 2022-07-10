@@ -9,8 +9,12 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback" />
         <!-- Font Awesome -->
         <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css" />
+        <!-- daterange picker -->
+        <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css" />
         <!-- Ionicons -->
         <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
+        <!-- Bootstrap Color Picker -->
+        <link rel="stylesheet" href="plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css" />
         <!-- Tempusdominus Bootstrap 4 -->
         <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css" />
         <!-- iCheck -->
@@ -42,7 +46,7 @@
         <div class="wrapper">
             <!-- Preloader -->
             <div class="preloader flex-column justify-content-center align-items-center">
-                <img class="animation__shake" src="dist/img/logo.png" alt="AdminLTELogo" height="60" width="60" />
+                <img class="animation__shake" src="dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60" />
             </div>
 
             <!-- Navbar -->
@@ -83,7 +87,7 @@
                     <nav class="mt-2">
                         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                             <!-- Add icons to the links using the .nav-icon class
-               with font-awesome or any other icon font library -->
+							with font-awesome or any other icon font library -->
                             <li class="nav-item">
                                 <a href="index.html" class="nav-link">
                                     <i class="nav-icon fas fa-home"></i>
@@ -93,7 +97,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="course.html" class="nav-link active">
+                                <a href="course.html" class="nav-link">
                                     <i class="nav-icon fas fa-table-tennis"></i>
                                     <p>
                                         Courts
@@ -101,7 +105,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="voucher.html" class="nav-link">
+                                <a href="voucher.html" class="nav-link active">
                                     <i class="nav-icon fas fa-ticket-alt"></i>
                                     <p>
                                         Voucher
@@ -116,96 +120,133 @@
             </aside>
 
             <!-- Content Wrapper. Contains page content -->
-            <div class="content-wrapper">
+            <div class="content-wrapper" style="min-height: 2646.44px;">
                 <!-- Content Header (Page header) -->
-                <div class="content-header">
+                <section class="content-header">
                     <div class="container-fluid">
                         <div class="row mb-2">
                             <div class="col-sm-6">
-                                <h1 class="m-0">Courts</h1>
+                                <h1>Create Voucher</h1>
                             </div>
-                            <!-- /.col -->
                             <div class="col-sm-6">
                                 <ol class="breadcrumb float-sm-right">
                                     <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                                    <li class="breadcrumb-item"><a href="course.html">Your Courts</a></li>
-                                    <li class="breadcrumb-item active">Add Court</li>
+                                    <li class="breadcrumb-item"><a href="voucher.html">Vouchers</a></li>
+                                    <li class="breadcrumb-item active">Create Vocuher</li>
                                 </ol>
                             </div>
-                            <!-- /.col -->
                         </div>
-                        <!-- /.row -->
                     </div>
                     <!-- /.container-fluid -->
-                </div>
-                <!-- /.content-header -->
+                </section>
 
                 <!-- Main content -->
                 <section class="content">
-                    <!-- Container fluid -->
-                    <div class="container-fluid">
-                        <!-- Main row -->
-                        <div class="col-md-6">
-                            <div class="card card-primary">
-                                <div class="card-header">
-                                    <h3 class="card-title">Add Court</h3>
-                                </div>
-                                <div class="card-body">
-                                    <div class="form-group">
-                                        <label for="inputName">Court Name</label>
-                                        <input type="text" id="inputName" class="form-control" />
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="inputName">Phone</label>
-                                        <input type="text" id="inputPhone" class="form-control" />
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="inputClientCompany">Email</label>
-                                        <input type="text" id="inputClientCompany" class="form-control" />
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="inputClientCompany">Address</label>
-                                        <input type="text" id="inputClientCompany" class="form-control" />
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="timeout">Working Time</label>
-                                        <div class="input-group">
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text">
-                                                    <i class="far fa-calendar-alt"></i>
-                                                </span>
-                                            </div>
-                                            <input type="text" class="form-control float-right" id="reservationtime" />
+                    <form action="voucher.html" method="post">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="card card-primary">
+                                    <div class="card-header">
+                                        <h3 class="card-title">Basic information</h3>
+
+                                        <div class="card-tools">
+                                            <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+                                                <i class="fas fa-minus"></i>
+                                            </button>
                                         </div>
                                     </div>
-                                    <div class="form-group">
-                                        <label for="exampleInputFile">Image File</label>
-                                        <div class="input-group">
-                                            <div class="custom-file">
-                                                <input type="file" class="custom-file-input" id="exampleInputFile" />
-                                                <label class="custom-file-label" for="exampleInputFile">Image</label>
+                                    <div class="card-body">
+                                        <div class="form-group">
+                                            <label for="inputName">Name of the discount program</label>
+                                            <input type="text" id="inputName" class="form-control" />
+                                            <span class="text-danger">Coupon name not visible to buyers</span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="vouchercode">Voucher Code</label>
+                                            <input type="text" id="vouchercode" class="form-control" />
+                                            <span class="text-danger">Please enter only alphabetic characters (AZ), numbers (0-9); maximum 5 characters.</span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="timeout">Date to use the code</label>
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text">
+                                                        <i class="far fa-calendar-alt"></i>
+                                                    </span>
+                                                </div>
+                                                <input type="text" class="form-control float-right" id="reservation" />
                                             </div>
-                                            <div class="input-group-append">
-                                                <span class="input-group-text">Upload</span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="timepicker">Time to applied</label>
+                                            <div class="input-group">
+                                                <div class="input-group-append" data-target="#timepicker" data-toggle="datetimepicker">
+                                                    <span class="input-group-text">
+                                                        <i class="far fa-clock"></i>
+                                                    </span>
+                                                </div>
+                                                <input type="text" class="form-control float-right datetimepicker-input" data-target="#timepicker" id="timepicker" />
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="timepicker1">Time to expired</label>
+                                            <div class="input-group">
+                                                <div class="input-group-append" data-target="#timepicker1" data-toggle="datetimepicker">
+                                                    <span class="input-group-text">
+                                                        <i class="far fa-clock"></i>
+                                                    </span>
+                                                </div>
+                                                <input type="text" class="form-control float-right datetimepicker-input" data-target="#timepicker1" id="timepicker1" />
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="form-group">
-                                        <label for="inputDescription">Course Description</label>
-                                        <textarea id="inputDescription" class="form-control" rows="4"></textarea>
-                                    </div>
+                                    <!-- /.card-body -->
                                 </div>
-                                <!-- /.card-body -->
-                                <div class="card-footer">
-                                    <a href="course.html" class="btn btn-secondary">Discard</a>
-                                    <a href="course.html" class="btn btn-success">Create a Course</a>
-                                </div>
+                                <!-- /.card -->
                             </div>
-                            <!-- /.card -->
+                            <div class="col-md-6">
+                                <div class="card card-secondary">
+                                    <div class="card-header">
+                                        <h3 class="card-title">Set up a discount code</h3>
+
+                                        <div class="card-tools">
+                                            <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+                                                <i class="fas fa-minus"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="card-body" style="display: block;">
+                                        <div class="form-group">
+                                            <label for="inputStatus">Discount Type</label>
+                                            <select id="inputStatus" class="form-control custom-select">
+                                                <option selected="" disabled="">Select one</option>
+                                                <option>According to the amount</option>
+                                                <option>By percent</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="inputrate">Reduced rate</label>
+                                            <input type="number" id="inputrate" class="form-control" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="maxusage">Maximum usage</label>
+                                            <input type="number" id="maxusage" class="form-control" />
+                                            <span class="text-danger">Total Usable Coupon Codes</span>
+                                        </div>
+                                    </div>
+                                    <!-- /.card-body -->
+                                </div>
+                                <!-- /.card -->
+                            </div>
                         </div>
-                        <!-- /.row (main row) -->
-                    </div>
-                    <!-- /.container-fluid -->
+                        <div class="row">
+                            <div class="col-12">
+                                <a href="voucher.html" class="btn btn-secondary">Cancel</a>
+                                <input type="submit" value="Create new Voucher" class="btn btn-success float-right" />
+                            </div>
+                        </div>
+                    </form>
                 </section>
                 <!-- /.content -->
             </div>
